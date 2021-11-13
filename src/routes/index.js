@@ -13,7 +13,7 @@ const {
   }
 } = require('../useCases');
 
-const pageNotAfound = (request, response) => {
+const pageNotAFound = (request, response) => {
   response
     .writeHead(404, { 'Content-Type': 'application/json' })
     .end(JSON.stringify({
@@ -31,5 +31,5 @@ module.exports = {
   '/heroes:post': createHero,
   '/heroes:put': updateHero,
   '/heroes:delete': deleteHero,
-  'default': pageNotAfound 
+  'default': pageNotAFound 
 }
