@@ -1,4 +1,8 @@
-const DEFAULT_HEADER = { 'Content-Type': 'application/json' };
+const DEFAULT_HEADER = { 
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  // 'Access-Control-Allow-Methods': 'GET' 
+};
 const {
   generateInstanceForHeroes,
   generateInstanceForUsers,

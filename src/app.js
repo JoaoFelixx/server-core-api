@@ -1,6 +1,7 @@
 const { createServer } = require('http');
-const routes           = require('./routes');
-const DEFAULT_HEADER   = { 'Content-Type': 'application/json' };
+const routes = require('./routes');
+const DEFAULT_HEADER = { 'Content-Type': 'application/json' };
+const PORT = 3000;
 
 const internalServerError = (request, response) => {
   response
@@ -36,8 +37,6 @@ const server = (request, response) => {
     internalServerError(request, response);
   }
 }
-
-const PORT = 3000;
 
 createServer(server)
   .listen(PORT, console.log(`Server on at ${PORT}`));  
